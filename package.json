@@ -2,7 +2,10 @@
   "dependencies": {
     "@solana-developers/helpers": "^2.5.6",
     "@solana/web3.js": "^1.95.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5",
     "esrun": "^3.2.26",
+    "i": "^0.3.7",
     "typescript": "^5.6.3"
   },
   "name": "solana-work",
