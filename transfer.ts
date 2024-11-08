@@ -41,13 +41,15 @@ const sendSolInstruction = SystemProgram.transfer({
  
 transaction.add(sendSolInstruction);
 
-transaction.feePayer = senderKeypair.publicKey;
-transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
+// transaction.feePayer = senderKeypair.publicKey;
+// transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
  
-console.log(await connection.simulateTransaction(transaction))
-transaction.sign(senderKeypair);
-const signature = await connection.sendRawTransaction(transaction.serialize(),{ skipPreflight: true })
+// console.log(await connection.simulateTransaction(transaction))
+// transaction.sign(senderKeypair);
+// const signature = await connection.sendRawTransaction(transaction.serialize(),{ skipPreflight: true })
  
+const signature = await sendAndConfirmTransaction(connection, transaction, [senderKeypair]);
+
 console.log(
   `💸 Finished! Sent ${LAMPORTS_TO_SEND} to the address ${toPubkey}. `,
 );
