@@ -1,4 +1,4 @@
-import { Connection, LAMPORTS_PER_SOL, PublicKey, Keypair, T, Transaction, SystemProgram, sendAndConfirmTransaction } from "@solana/web3.js";
+import { Connection, LAMPORTS_PER_SOL, PublicKey, Keypair, Transaction, SystemProgram, sendAndConfirmTransaction } from "@solana/web3.js";
 import { config, config as dotenv } from "dotenv"
 dotenv();
 import { getKeypairFromEnvironment, getKeypairFromFile } from "@solana-developers/helpers";
